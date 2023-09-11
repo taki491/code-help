@@ -1,0 +1,229 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Lato", sans-serif;
+}
+
+body,
+html {
+  width: 100%;
+  height: 100%;
+
+  background-color: #ffffff;
+}
+
+/* <-------- main-container --------> */
+
+.main-container {
+  width: 100%;
+  height: 100%;
+}
+
+/* <-------- header / navbar --------> */
+
+header {
+  height: 100px;
+  width: 100%;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 3vw;
+  border-bottom: 2px solid #dadada;
+}
+
+/* <-------- header left --------> */
+.nav-left {
+  font-size: 2vw;
+}
+
+/* <-------- header right --------> */
+.nav-right {
+  display: flex;
+  flex-direction: row;
+  gap: 2vw;
+  align-items: center;
+}
+
+.nav-right h4 {
+  font-size: 1.4vw;
+}
+
+.nav-right h4 a {
+  color: black;
+  text-decoration: none;
+  transition: all linear 0.15s;
+}
+
+.nav-right h4 a:hover {
+  border-bottom: 1px solid #5ce3a8;
+  color: #5ce3a8;
+}
+
+/* <-------- remix icon right--------> */
+.ri-menu-4-line {
+  font-size: 1.9vw;
+  display: none;
+}
+
+/* <-------- content box --------> */
+.content {
+  height: calc(100% - 100px);
+  width: 100%;
+
+  display: flex;
+  flex-direction: row;
+
+  justify-content: space-between;
+
+  position: relative;
+}
+
+/* <-------- content left --------> */
+.content-left {
+  width: 55%;
+  height: 100%;
+  padding: 5vw 3vw;
+}
+/* <-------- content left , individual item --------> */
+.content-left h1 {
+  font-size: 3.5vw;
+  padding-bottom: 2vw;
+}
+
+.content-left h1 span {
+  color: #5ce3a8;
+  font-size: 4.5vw;
+}
+
+h1 span .border-bottom {
+  color: black;
+  border-bottom: 5px solid #5ce3a8;
+  border-radius: 30px;
+  transition: all linear 0.15s;
+}
+
+h1 span .border-bottom:hover {
+  color: #5ce3a8;
+  border-bottom: 5px solid black;
+  cursor: cell;
+}
+
+.content-left p {
+  font-size: 2vw;
+  padding-bottom: 2vw;
+  width: 70%;
+  color: #333;
+}
+
+/* <-------- button --------> */
+
+button {
+  font-size: 1.5vw;
+  padding: 1vw 2vw;
+  border-style: none;
+  border: 1px solid black;
+  border-radius: 4px;
+  background-color: #5ce3a8;
+
+  font-weight: 700;
+  color: #1f1a1a;
+  transition: all 0.15s linear;
+}
+
+button:hover {
+  cursor: pointer;
+  box-shadow: 5px 5px 0px 0px black;
+}
+
+/* <-------- content right --------> */
+.content-right {
+  width: 45%;
+  height: 100%;
+}
+
+/* <-------- content right , individual item --------> */
+.content-right img {
+  height: 100%;
+  width: 100%;
+}
+
+/* <-------- media queries --------> */
+@media (max-width: 600px) {
+  /* all about nav bar */
+  header {
+    background-color: #5ce3a8;
+    height: 100px;
+    padding: 2vw 3vw;
+  }
+
+  .nav-left h1 {
+    font-size: 5vw;
+  }
+
+  .nav-right h4 {
+    display: none;
+    font-size: 4vw;
+  }
+
+  .nav-right h4 a {
+    color: white;
+  }
+
+  .ri-menu-4-line {
+    display: block;
+    font-size: 3.5vw;
+    text-align: center;
+    font-weight: 800;
+  }
+
+  /* all about content */
+  button {
+    box-shadow: none;
+    font-size: 2.5vw;
+    padding: 10px 15px;
+  }
+
+  button:hover {
+    box-shadow: none;
+  }
+
+  .main-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .content {
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+  }
+
+  .content-right {
+    width: 100%;
+    height: 50%;
+  }
+  .content-left {
+    width: 100%;
+    height: 50%;
+  }
+
+  .content-left h1 {
+    font-size: 6vw;
+  }
+
+  .content-left p {
+    font-size: 4vw;
+  }
+
+  .content-left h1 span {
+    font-size: 7.5vw;
+  }
+
+  .content-right img {
+    height: 100vw;
+  }
+}
